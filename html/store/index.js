@@ -1,4 +1,4 @@
-function login(input){
+function login(){
 	var input1 = document.getElementById("email_login");
 	var input2 = document.getElementById("password_login");
 	var mess = document.getElementById("status_login");
@@ -43,7 +43,10 @@ function login(input){
 	xhttp.send("email="+email+"&passw="+password);
 }
 
-
+function check_key_login(event) {
+	if (event.code == "Enter")
+		login();
+}
 
 
 
@@ -292,29 +295,35 @@ function mouseout(div) {
 	img.width = 100;*/
 }
 
-
-
 function popup_login_open() {
 	var div = document.getElementById("div-login");
+	var div2 = document.getElementById("div-register");
+	div2.style.display = "none";
 	div.style.display = "block";
 	window.scrollTo(0, 100);
 }
 
 function popup_register_open() {
 	var div = document.getElementById("div-register");
+	var div2 = document.getElementById("div-login");
+	div2.style.display = "none";
 	div.style.display = "block";
 	window.scrollTo(0, 100);
 }
 
 function loaded(){
-	var	cart = JSON.parse(document.getCookie('cart'),true); // get cart from cookie in JSON notation
-	var id;
-	if (Object.keys(cart).length != 0)
-		for (var key in cart) {
-			id = parseInt(key.slice(4));
-			document.getElementById("q"+String(id)).value = cart[key];
-		}
-	window.onclick = login_close;
+	//alert(document.cookie);
+	if (existCookie("cart")){
+		var	cart = JSON.parse(document.getCookie('cart'),true); // get cart from cookie in JSON notation
+		var id;
+		//alert(document.cookie);
+		if (Object.keys(cart).length != 0)
+			for (var key in cart) {
+				id = parseInt(key.slice(4));
+				document.getElementById("q"+String(id)).value = cart[key];
+			}
+	}
+	//window.onclick = login_close;
 
 	var modal = document.getElementById('div-login');
 	var modal2 = document.getElementById('div-register');
@@ -333,6 +342,7 @@ function loaded(){
 
 
 	if (existCookie("usid")){
+		//alert("logged");
 		//alert("loaded");
 		//document.getElementById("blogin").style.display = "none";
 		//document.getElementById("blogout").style.display = "block";
@@ -340,12 +350,16 @@ function loaded(){
 		document.getElementById("alogin").style.display = "none";
 		document.getElementById("aregister").style.display = "none";
 		document.getElementById("alogout").style.display = "block";
-		if (existCookie("admin")) {
+		if (existCookie("utype")) {
 			//document.getElementById("bnew_product").style.display = "block";
-			document.getElementById("anew_product").style.display = "block";
+			if (document.getCookie("utype") == '1')
+				document.getElementById("anew_product").style.display = "block";
 		}
 
 	}
+	//else
+		//alert("not logged");
+	//alert(document.cookie);
 
 }
 

@@ -4,10 +4,10 @@
 		
 		<div class="container">
 			<label><b>E-mail</b><br>
-			<input type="text" placeholder="Enter E-mail" name="email" id = "email_login" required></label><br>
+			<input type="text" placeholder="Enter E-mail" name="email" id = "email_login" onkeydown = "check_key_login(event)" required></label><br>
 
 			<label><b>Password</b><br>
-			<input type="password" placeholder="Enter Password" id = "password_login" name="passw" required></label><br>
+			<input type="password" placeholder="Enter Password" id = "password_login" name="passw" onkeydown = "check_key_login(event)" required></label><br>
 				
 			<button id = "submit_login" onclick = "login()" type = "button" >Login</button>
 			<span id = status_login></span>
