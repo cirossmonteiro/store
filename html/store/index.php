@@ -9,12 +9,12 @@
 		<link rel="stylesheet" type="text/css" href="allstyle.css">
 	</head>
 
-	
+
 
 	<!-- body background = "product_pics/prod209"-->
 	<body>
 		<script src = "allscripts.js"></script>
-		<?php 
+		<?php
 			//echo file_get_contents("scripts.html");
 			ini_set('display_errors', 1);
 			ini_set('display_startup_errors', 1);
@@ -22,11 +22,11 @@
 			echo file_get_contents("navigation_carrossel.html");
 			echo "<br><br>";
 			echo file_get_contents("nav_pages/cart.html");
-            echo "<br><br>";
-            echo file_get_contents("nav_pages/login.html");
-            echo "<br><br>";
-            echo file_get_contents("nav_pages/register.html");
-            echo "<br><br>";
+      echo "<br><br>";
+      echo file_get_contents("nav_pages/login.html");
+      echo "<br><br>";
+      echo file_get_contents("nav_pages/register.html");
+      echo "<br><br>";
 		?>
 
 
@@ -72,7 +72,7 @@
 			 		$conn = mysqli_connect($servername, $username, $password, $dbname);
 					if (!$conn) {
 						die("Connection failed: " . mysqli_connect_error());
-					} 
+					}
 
 
 					$cmd = "select * from products order by id desc;";
@@ -81,7 +81,7 @@
 					$print = "<br><br><div class = \"prods\">";
 					$product = file_get_contents("product_index.html");
 
-					
+
 					while ($row = $res->fetch_assoc())
 						$print .= sprintf($product,$row['name'],$row['price'],$row['description'],$row['stock'],$row['id'],$row['id'],$row['id']);
 

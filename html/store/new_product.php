@@ -48,7 +48,7 @@
  		$conn = mysqli_connect($servername, $username, $password, $dbname);
 		if (!$conn) {
 			die("Connection failed: " . $conn->connect_error);
-		} 
+		}
 		else
 			echo "Connected to db<br>";
 
@@ -60,7 +60,7 @@
 		//$product = "<div style = \"width:200px;float:left;\">Name: %s<br>Price: %.2f<br>Description: %s<br>Stock: %d<br><img src = '%s'  onerror=\"this.src='default_product.png'\" width = 100 height = 100></div>\n";
 		$product = file_get_contents("product_new.html");
 
-		
+
 		while ($row = $res->fetch_assoc())
 			$print .= sprintf($product,$row['id'],$row['name'],$row['id'],$row['price'],$row['id'],$row['description'],$row['id'],$row['stock'],"product_pics/prod".$row['id'],$row['id'],$row['id']);
 

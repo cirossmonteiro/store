@@ -5,7 +5,7 @@ function login(){
 	var but = document.getElementById("submit_login");
 	var email = input1.value;
 	var password = input2.value;
-	
+
 	if (email.indexOf('@') == -1 || email.indexOf('.') == -1) {
 		mess.innerHTML = "This e-mail address is not valid.";
 		but.disabled = true;
@@ -13,7 +13,7 @@ function login(){
 	}
 
 	var xhttp = new XMLHttpRequest();
-	
+
 	xhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			var ret = this.responseText;
@@ -37,7 +37,7 @@ function login(){
 			}
 		}
 	};
-	
+
 	xhttp.open("post","check_email.php",true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("email="+email+"&passw="+password);
@@ -107,7 +107,7 @@ function login(){
 	var but = document.getElementById("submit_login");
 	var email = input1.value;
 	var password = input2.value;
-	
+
 	if (email.indexOf('@') == -1 || email.indexOf('.') == -1) {
 		mess.innerHTML = "This e-mail address is not valid.";
 		but.disabled = true;
@@ -115,7 +115,7 @@ function login(){
 	}
 
 	var xhttp = new XMLHttpRequest();
-	
+
 	xhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			var ret = this.responseText.charAt(0);
@@ -135,7 +135,7 @@ function login(){
 				mess.innerHTML = ret;
 		}
 	};
-	
+
 	xhttp.open("post","check_email.php",true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("email="+email+"&passw="+password);
@@ -166,7 +166,7 @@ function name_price_qtd(id, qtd) {
 
 		var xhttp = new XMLHttpRequest();
 		//alert("var");
-		
+
 		xhttp.onreadystatechange = function () {
 			if (this.readyState == 4 && this.status == 200) {
 				try{
@@ -246,7 +246,7 @@ function update(but){
 	if (document.getElementById('q'+String(id)).value == null
 		|| document.getElementById('q'+String(id)).value == "")
 		return;
-	
+
 	var qtd = parseInt(document.getElementById('q'+String(id)).value); // get value from <input>
 
 	if (qtd == null)
@@ -304,9 +304,10 @@ function popup_login_open() {
 }
 
 function popup_register_open() {
-	var div = document.getElementById("div-register");
-	var div2 = document.getElementById("div-login");
-	div2.style.display = "none";
+	alert("div-register1");
+	var div = document.getElementById("div-register1");
+	//var div2 = document.getElementById("div-login");
+	//div2.style.display = "none";
 	div.style.display = "block";
 	window.scrollTo(0, 100);
 }
@@ -338,9 +339,6 @@ function loaded(){
 	        modal2.style.display = "none";
 	    }
 	}
-
-
-
 	if (existCookie("usid")){
 		//alert("logged");
 		//alert("loaded");
