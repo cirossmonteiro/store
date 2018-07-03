@@ -13,13 +13,6 @@
             Cool, now I can use git LOL.<br><br>
             <div class = "dclose" onclick = "dclose('initial');">close</div>
         </div><br>
-        <div id = "god">
-            <img src = "god.png">
-        </div>
-        <div id = "cunha">
-            <img src = "cunha.gif">
-            <div class = "dclose" onclick = "dclose('cunha');">close</div>
-        </div>
     <script src = "script.js"></script>
     </body>
 </html>
