@@ -2,9 +2,17 @@ body {
     background-image: url("img2.png");
 }
 
-.puretxt {
+.txt1 {
     color: #FFFFFF;
     font-size: 20px;
+    background: rgba(76,76,76,0.5);
+    padding: 5px;
+    display: inline-block;
+}
+
+.slider1 {
+    width: 200px;
+    float: right;
 }
 
 #initial {
@@ -14,26 +22,18 @@ body {
     animation-name: init;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    background-color: black;
     position: relative;
-    border-style: double;
-    display: inline-block;
-    opacity: 0.6;
-}
-
-#initial:target {
-    display: none;
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes init {
-    from {top: 500px;}
-    to {top: 0px;}
+    from {top: 500px; left: 0px;}
+    to {top: 100px; left: 100px;}
 }
 
 @keyframes init {
-    from {top: 500px;}
-    to {top: 0px;}
+    from {top: 500px; left: 0px;}
+    to {top: 100px; left: 100px;}
 }
 
 #god {
@@ -48,7 +48,18 @@ body {
     z-index: 2;
 }
 
-#initial-close {
+.dclose {
+    background: rgba(76,76,76,0.5);
+    width: auto;
+    cursor: pointer;
+    color: #FFFFFF;
+    position: relative;
+    border-style: double;
+    display: inline-block;
+}
+
+.dclose:hover {
+    color: #FF9F00;
     cursor: pointer;
 }
 
