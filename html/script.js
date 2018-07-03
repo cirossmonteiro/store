@@ -28,7 +28,6 @@ function open_cunha() {
 
 function update_test_color(col) {
     //alert("update");
-    try {
     var elem = document.getElementById("test-color");
     var check = document.getElementById("hold1");
     var red, blue, green;
@@ -51,7 +50,4 @@ function update_test_color(col) {
     //alert(s);
     elem.style.color = s;
     elem.innerHTML = s;
-}catch(e){
-    alert(e.message);
-}
 }
