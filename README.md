@@ -28,4 +28,4 @@ In the future:
 - a chatting (only text) script written in Python, which server will be inside my VPS (I guess, probably using websocket - I gotta learn that first)
 
 One day, who knows:
-- get a real job
+- get a real job in IT
