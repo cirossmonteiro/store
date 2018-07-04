@@ -10,8 +10,12 @@ The address is 140.82.27.108, in case you're curious to see what it's like.
 
 I may share some articles too, in order to show I can talk about other stuff.
 
+The background image is the index.php code opened in Atom (a pretty good IDE to manage many files)
+
 What I've already done:
 - navigation bar with dropdown links
+- god moving (Articles > Religion)
+- Cunha's interview in .gif (Articles > Politics)
 - a color palette in Canvas (not up yet)
 
 Coming soon:
