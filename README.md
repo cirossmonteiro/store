@@ -21,7 +21,8 @@ What I've already done:
 Coming soon:
 - finantial graphics in Canvas 
 - MySQL database with market data got from BM&FBovespa's (Brazilian stock exchange) FTP website: ftp://ftp.bmf.com.br/MarketData/, making a public MySQL account available for SELECT queries (of course, limiting the resources, so I don't get f*d up by an anonymous creepy guy)
--- maybe updating this database daily
+
+ - maybe updating this database daily
 
 In the future:
 - a chatting (only text) script written in Python, which server will be inside my VPS (I guess, probably using websocket - I gotta learn that first)
