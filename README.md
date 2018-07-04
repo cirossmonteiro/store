@@ -19,6 +19,7 @@ What I've already done:
 - a color palette in Canvas (not up yet)
 
 Coming soon:
+- CSV to images
 - finantial graphics in Canvas 
 - MySQL database with market data got from BM&FBovespa's (Brazilian stock exchange) FTP website: ftp://ftp.bmf.com.br/MarketData/, making a public MySQL account available for SELECT queries (of course, limiting the resources, so I don't get f*d up by an anonymous creepy guy)
   - maybe updating this database daily
